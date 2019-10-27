@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstiOSApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -45,6 +45,14 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="gWr-qU-eo7"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atq-gd-b8e">
+                                <rect key="frame" x="20" y="183.5" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ohx-A0-gSu" appends="YES" id="sVf-xv-ssm"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,12 +63,21 @@
                     </view>
                     <connections>
                         <outlet property="fieldLabel" destination="aq6-8d-HPa" id="hX2-ro-mSv"/>
+                        <outlet property="imageView" destination="atq-gd-b8e" id="muh-mX-wOf"/>
                         <outlet property="nameTextField" destination="lk4-d7-ko7" id="pIW-yZ-ehD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ohx-A0-gSu">
+                    <connections>
+                        <action selector="selectImageFromGallery:" destination="BYZ-38-t0r" id="h0z-py-p9N"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultImage" width="540" height="540"/>
+    </resources>
 </document>
