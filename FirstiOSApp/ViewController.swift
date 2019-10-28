@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
 UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     //MARK: Properties
     
+    @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var fieldLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
