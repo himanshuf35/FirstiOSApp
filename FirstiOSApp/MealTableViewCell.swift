@@ -9,7 +9,12 @@
 import UIKit
 
 class MealTableViewCell: UITableViewCell {
-
+    
+    //MARK: Properties
+    @IBOutlet weak var mealNameLabel: UILabel!
+    @IBOutlet weak var mealImage: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
