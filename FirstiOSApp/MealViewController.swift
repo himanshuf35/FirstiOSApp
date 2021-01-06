@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  FirstiOSApp
 //
 //  Created by himanshu yadav on 20/10/19.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate,
+class MealViewController: UIViewController, UITextFieldDelegate,
 UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     //MARK: Properties
     
     @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var fieldLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     //MARK: UITextFieldDelegate
     
@@ -25,7 +24,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        fieldLabel.text = textField.text
+ 
     }
     
     //MARK: UIImagePickerControllerDelegate
